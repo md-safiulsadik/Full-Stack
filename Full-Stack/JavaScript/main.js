@@ -84,9 +84,117 @@ console.log(person);
 console.log(person.address.city, person.address.street, person.address.state);
 console.log(person.languages);
 
-const { firstName, lastName, address: { city, street }, languages} = person;
+const { firstName, lastName, address: { city, street }, languages } = person;
 
 person.email = `${firstName}${lastName}@gmail.com`;
 
 languages.fill('LOL');
 console.log(firstName, lastName, city, street, languages);
+
+const toDo = [
+    {
+        id: 1,
+        text: 'Read: A Productive Muslim',
+        isCompleted: false
+    },
+    {
+        id: 2,
+        text: 'Code: DSA',
+        isCompleted: true
+    },
+    {
+        id: 3,
+        text: 'Take a bath',
+        isCompleted: true
+    },
+    {
+        id: 4,
+        text: 'Workout',
+        isCompleted: false
+    }
+];
+
+console.log(toDo);
+
+const toDoJSON = JSON.stringify(toDo);
+console.log(toDoJSON);
+
+for (let task of toDo) {
+    console.log(task.id, task.text);
+}
+
+
+
+
+//            forEach, map, filter
+
+toDo.forEach(task => {
+    console.log(task.text);
+});
+
+const toDoText = toDo.map(task => {
+    return task.text;
+});
+console.log(toDoText);
+
+
+const toDoCompleted = toDo.filter(task => {
+    return task.isCompleted === true;
+}).map(task => {
+    return task.text;
+});
+console.log(toDoCompleted);
+
+
+//          Conditionals
+
+const X = '10';
+
+if (X === 10) {
+    console.log(`X is ${X}`);
+} else {
+    console.log(`X is not 10`);
+}
+
+if (X == 10) {  // == don't care about the variable type.
+    console.log(`X is ${X}`);
+}
+
+const color = x > 10 ? 'red' : 'yellow'
+console.log(color);
+
+
+//          Switch
+
+switch (color) {
+    case 'red':
+        console.log('Color is red');
+        break;
+    case 'blue':
+        console.log('Color is blue');
+        break;
+    default:
+        console.log('Color is not red or blue');
+        break;
+}
+
+
+//          Functions
+
+const num1 = 10, num2 = 20;
+
+// function addNumber(num1, num2) {
+//     return num1 + num2;
+// }
+
+const addNumber = (num1, num2) => {
+    return num1 + num2;
+}
+const multiNumber = (num1, num2) => num1 * num2;
+
+const addition = addNumber(num1, num2)
+console.log(addition);
+
+console.log(multiNumber(num1, num2));
+// const multiplication = multiNumber(num1, num2)
+// console.log(multiplication);
