@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <h1 id="title">Takwa Survey Form</h1>
+    <p id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ab quis nesciunt accusamus sequi
+        repellat! Fugit, accusantium iure nemo modi quia omnis eaque! Blanditiis quam quidem quis repellendus, provident
+        rerum?</p>
+    <form action="thanks.html" id="survey-form">
+
+        <div id="name">
+            <label id="name-label">Name: </label>
+            <input type="text" name="name" id="name" placeholder="ex. Abdullah" required>
+        </div>
+
+        <div id="email">
+            <label id="email-label">Email: </label>
+            <input type="email" name="email" id="email" placeholder="abdullah@example.com" required>
+        </div>
+
+        <div id="age">
+            <label id="number-label">Age: </label>
+            <input type="number" name="age" id="number" max=100 min=12 placeholder="23">
+        </div>
+
+        <div id="mathhab">
+            <label id="mathhab">Mathhab: </label>
+            <select name="mathhab" id="dropdown">
+                <option value="hanbali">Hanbali</option>
+                <option value="saf'i">Saf'i</option>
+                <option value="maliki">Maliki</option>
+                <option selected value="hanafi">Hanafi</option>
+            </select>
+        </div>
+
+        <div id="prayer"> <label for="rank">Place check the boxes:</label>
+            <label for="isha">Fazr</label>
+            <input type="checkbox" name="fazr" id="fazr" value="fazr">
+            <label for="duhr">Duhr</label>
+            <input type="checkbox" name="duhr" id="duhr" value="duhr">
+            <label for="asr">Ars</label>
+            <input type="checkbox" name="asr" id="asr" value="asr">
+            <label for="magrib">Magrib</label>
+            <input type="checkbox" name="magrib" id="magrib" value="magrib">
+            <label for="isha">Isha</label>
+            <input type="checkbox" name="isha" id="isha" value="isha">
+        </div>
+
+        <div id="comming">
+            <label for="is-coming">Are you coming?</label>
+            <label for="yes">Yes</label>
+            <input type="radio" name="button" id="button" value="yes">
+            <label for="no">No</label>
+            <input type="radio" name="button" id="button" value="no">
+        </div>
+
+        <div id="comment">
+            <label for="comment">Share your thoughts</label>
+            <textarea name="comment" id="comment" rows="7" cols="30"></textarea>
+        </div>
+
+        <div id="button">
+            <button id="submit">Submit</button>
+        </div>
+
+    </form>
+</body>
+
+</html>
